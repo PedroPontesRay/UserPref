@@ -1,0 +1,228 @@
+#root.root {--toolbar-el-overlay-selected-bg: #ffffffff;}
+#root.root {--notification-fg: #000000ff;}
+#root.root {--frame-bg: #fbf1c7;}
+/* Gruvbox Dark Theme Adaptation */
+#root.root {
+  /* Base Colors */
+  --frame-bg: #282828; /* bg (background) */
+  --toolbar-bg: #3c3836; /* bg1 */
+  --active-el-bg: #504945; /* bg2 */
+  --notification-bg: #3c3836; /* bg1 */
+  --ctx-menu-bg: #3c3836; /* bg1 */
+  --popup-bg: #3c3836; /* bg1 */
+  --bookmarks-expanded-folder-bg: rgba(235, 219, 178, 0.031);
+
+  /* Foreground/Text Colors */
+  --active-el-fg: #ebdbb2; /* fg */
+  --notification-fg: #ebdbb2; /* fg */
+  --ctx-menu-fg: #ebdbb2; /* fg */
+  --popup-fg: #ebdbb2; /* fg */
+  --tabs-normal-fg: #ebdbb2; /* fg */
+  --tabs-activated-fg: #1d2021; /* bg0 */
+  --bookmarks-node-activated-fg: #ebdbb2;
+
+  /* Accent Colors */
+  --accent: #fe8019; /* orange */
+  --nav-btn-accent: #fe8019;
+  --status-active: #fe8019;
+  --scroll-progress-bg: #fe8019;
+  --frame-el-overlay-selected-border: #fe8019;
+  --toolbar-el-overlay-selected-border: #fe8019;
+
+  /* Status Colors */
+  --status-ok: #b8bb26; /* green */
+  --status-err: #fb4934; /* red */
+  --status-notice: #83a598; /* blue */
+
+  /* Borders and Separators */
+  --border: #665c54; /* bg3 */
+  --windows-popup-window-border: #504945; /* bg2 */
+  --ctx-menu-separator: #504945; /* bg2 */
+
+  /* Overlays and Shadows */
+  --active-el-overlay-hover-bg: rgba(235, 219, 178, 0.086);
+  --active-el-overlay-clicked-bg: rgba(235, 219, 178, 0.141);
+  --frame-el-overlay-hover-bg: rgba(235, 219, 178, 0.086);
+  --frame-el-overlay-clicked-bg: rgba(235, 219, 178, 0.141);
+  --frame-el-overlay-selected-bg: rgba(235, 219, 178, 0.141);
+  --toolbar-el-overlay-hover-bg: rgba(235, 219, 178, 0.086);
+  --toolbar-el-overlay-clicked-bg: rgba(235, 219, 178, 0.141);
+  --toolbar-el-overlay-active-bg: rgba(235, 219, 178, 0.141);
+  --toolbar-el-overlay-selected-bg: rgba(235, 219, 178, 0.141);
+  --active-el-shadow: 0 1px 4px -1px rgba(0,0,0,0.282), inset 0 0 0 1px rgba(235, 219, 178, 0.031);
+  --ctx-menu-shadow: 0 0 0 1px #504945, 0 1px 16px 0 rgba(0,0,0,0.282);
+  --popup-shadow: 0 0 0 1px #504945, 0 1px 16px 0 rgba(0,0,0,0.282);
+  --tabs-activated-shadow: 0 1px 4px -1px rgba(0,0,0,0.282), inset 0 0 0 1px rgba(235, 219, 178, 0.031);
+  --bookmarks-expanded-folder-shadow: 0 2px 6px -2px rgba(0,0,0,0.282), inset 0 0 0 1px rgba(235, 219, 178, 0.031);
+  --nav-btn-active-shadow: inset 0 0 0 1px rgba(235, 219, 178, 0.071), 0 1px 3px 0 rgba(0,0,0,0.212);
+
+  /* Scrollbars */
+  --scroll-color: rgba(235, 219, 178, 0.212);
+  --popup-scrollbar-color: rgba(235, 219, 178, 0.275);
+  --frame-scrollbar-color: rgba(235, 219, 178, 0.275);
+  --toolbar-scrollbar-color: #b8bb26; /* green */
+
+  /* Tabs */
+  --tabs-progress-bg: rgba(235, 219, 178, 0.086);
+  --tabs-activated-bg: #504945;
+  --tabs-color-layer-opacity: 0.2;
+  --tabs-activated-color-layer-opacity: 0.3;
+  --tabs-discarded-favicon-opacity: 0.48;
+  --tabs-discarded-title-opacity: 0.56;
+  --tabs-lvl-opacity: 0.16;
+
+  /* Layout (unchanged from original) */
+  --bottom-bar-height: 30px;
+  --d-swift: 0.12s;
+  --d-fast: 0.16s;
+  --d-norm: 0.3s;
+  --d-slow: 0.42s;
+  --scroll-progress-height: 1px;
+  --btn-border-radius: 4px;
+  --notification-border-radius: 4px;
+  --notification-margin: 4px;
+  --notification-max-width: 300px;
+  --ntb-padding: 2px;
+  --ntb-border-radius: 4px;
+  --ntb-btn-height: 30px;
+  --search-height: 30px;
+  --search-icon-width: 28px;
+  --search-font-size: 1rem;
+  --search-border-radius: 4px;
+  --slt-margin: 2px;
+  --slt-border-radius: 4px;
+  --slt-padding: 6px 0;
+  --ctx-menu-min-width: 160px;
+  --ctx-menu-max-width: 200px;
+  --ctx-menu-font: 0.875rem sans-serif;
+  --ctx-menu-border-radius: calc(4px + 1px);
+  --ctx-menu-opt-border-radius: calc(4px - 2px + 1px);
+  --ctx-menu-padding: 2px;
+  --ctx-menu-text-opt-inner-gap: 4px;
+  --ctx-menu-text-opt-height: 26px;
+  --ctx-menu-icon-opt-height: 30px;
+  --history-item-margin: 2px;
+  --history-item-border-radius: 4px;
+  --history-item-padding-left: 6px;
+  --history-item-padding-right: 5px;
+  --bookmarks-indent: 12px;
+  --bookmarks-bookmark-height: 30px;
+  --bookmarks-folder-height: 30px;
+  --bookmarks-separator-height: 17px;
+  --bookmarks-bookmark-font: 0.9375rem sans-serif;
+  --bookmarks-folder-font: 0.9375rem sans-serif;
+  --bookmarks-margin: 2px;
+  --bookmarks-border-radius: 4px;
+  --bookmarks-inner-gap: 6px;
+  --bookmarks-open-mark-top: 3px;
+  --bookmarks-open-mark-left: 3px;
+  --bookmarks-sub-panel-height: 66vh;
+  --tabs-font: 0.9375rem sans-serif;
+  --tabs-count-font: 0.5625rem sans-serif;
+  --tabs-border-radius: 4px;
+  --tabs-inner-gap: 5px;
+  --tabs-close-btn-margin: 2px;
+  --tabs-audio-btn-width: 22px;
+  --nav-btn-width: 30px;
+  --nav-btn-height: 30px;
+  --nav-btn-margin: 2px;
+  --nav-delimiter-size: 16px;
+  --nav-btn-len-margin: 0px;
+  --nav-btn-border-radius: 4px;
+  --nav-hidden-btn-border-radius: 4px;
+  --nav-hidden-panels-popup-margin: 3px;
+  --general-margin: 2px;
+  --tabs-indent: 0px;
+  --general-border-radius: 4px;
+  --tabs-height: 32px;
+  --tabs-margin: 6px;
+  --pinned-tabs-col: 4;
+}
+
+/* Additional Gruvbox Styling Rules */
+#root.root {
+  flex-direction: column;
+}
+
+.NavigationBar .main-items {
+  justify-content: center;
+}
+
+.Tab {
+  min-width: 33px;
+  transition: all ease-in-out 200ms;
+}
+
+.NavigationBar {
+  transition: all ease-in-out 200ms;
+}
+
+.NavigationBar[data-layout="inline"] .main-items .nav-item {
+  transform: translateX(0) !important;
+  position: relative !important;
+  flex-grow: 1;
+  max-width: 66px;
+}
+
+.NavigationBar[data-layout="inline"] .main-items .nav-item[data-active="false"] {
+  display: none;
+}
+
+.BottomBar {
+  display: none;
+}
+
+.Tab .audio, .Tab .title {
+  opacity: 0 !important;
+  transition: ease-in-out 250ms;
+}
+
+.Tab[data-pin="true"] .fav, .Tab[data-pin="true"] .fav-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.Tab[data-pin="false"] .fav, .Tab[data-pin="false"] .fav-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.Tab[data-pin="true"][data-active="true"] .color-layer {
+  background-color: #ebdbb2 !important;
+}
+
+.Tab[data-pin="false"] .color-layer {
+  opacity: 0 !important;
+  border: 0 !important;
+}
+
+.Tab[data-pin="false"][data-active="true"] .body {
+  box-shadow: rgba(17, 17, 26, 0.15) 0px 0px 16px;
+}
+
+.Tab[data-pin="false"] {
+  border: 0 !important;
+}
+
+.Tab .title {
+  background: linear-gradient(90deg, var(--tabs-normal-fg) 80%, #f1f1f100 99%);
+  background-clip: text;
+  color: transparent;
+}
+
+@media screen and (min-width: 350px) {
+  .NavigationBar[data-layout="inline"] .main-items .nav-item[data-active="false"] {
+    display: flex;
+  }
+  .BottomBar {
+    display: flex;
+  }
+  #root.root {
+    --tabs-indent: 14px;
+  }
+  .Tab .audio, .Tab .title {
+    opacity: 1 !important;
+  }
+  #root.root {--tabs-pinned-height: 40px;}
+  #root.root {--tabs-pinned-width: calc((100vw - (var(--tabs-margin) * (var(--pinned-tabs-col) + 1))) / var(--pinned-tabs-col));}
+}
