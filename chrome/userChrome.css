@@ -1,112 +1,98 @@
-html {
-  --custom-bg: #fbf1c7;
-}
 
-body {
-  background: var(--custom-bg) !important;
-}
-
-html:not([privatebrowsingmode="temporary"]) #navigator-toolbox {
-  padding-top: 3px;
-  padding-bottom: 4px;
-  background: var(--custom-bg) !important;
-  border-bottom: 0 !important;
-}
+/*************************************************** One_Liner ***************************************************/
+#tabbrowser-tabs { visibility: collapse !important; }
 
 #nav-bar {
-  background: var(--custom-bg) !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: calc(100% - 20px);
+margin-top: -30px;
+margin-right: 35vw;
+margin-bottom: 0px;
+margin-left: 0px;}
+
+/* if the screen is smaller than 1300px right margin is 30% */
+@media screen and (max-width: 1700px){
+  #urlbar-container{ min-width:unset !important }
+  #navigator-toolbox > #nav-bar{ margin-right:30vw !important}
 }
 
-/* Ensure icons are centered within the nav-bar */
-#nav-bar > .nav-bar-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+/* if the screen is smaller than 950px right margin is 20% */
+@media screen and (max-width: 950px){
+  #urlbar-container{ min-width:unset !important }
+  #navigator-toolbox > #nav-bar{ margin-right:20vw !important}
+}
+/*************************************************** SIDEBERY ***************************************************/
+#sidebar-box {  min-width: 1px !important;}
+
+#sidebar-header{ display: none }
+
+/************************************************ Hover_text_color ***************************************************/
+tooltip{-moz-appearance: none !important; background:#232323 !important; color: #ededed}
+
+/******************************************* Remove_Search_with_Google ***********************************************/
+#urlbar[usertyping] .urlbarView-row:not([type]):first-child,
+#urlbar[usertyping] .urlbarView-row[type="search"]:first-child,
+.urlbarView-row[type="tabtosearch"] {
+  display: none !important;
 }
 
-html:not([privatebrowsingmode="temporary"]) #sidebar-box {
-  background: var(--custom-bg) !important;
+/******************************************* Remove_Padding_and_button_fix *************************************************/
+#urlbar-container{ padding-block: 0px !important }
+.titlebar-buttonbox-container{ -moz-box-align: start !important; }
+
+/*************************************** Remove 1 pixel sized black line *********************************************/
+#navigator-toolbox {
+  border-bottom: none !important;
 }
 
-html:not([privatebrowsingmode="temporary"]) #sidebar-splitter {
-  border: none !important;
-  background: transparent !important;
-  width: 1px !important;
+/*************************************** Remove Right Click Menu Top Settings ****************************************/
+#context-navigation,#context-sep-navigation{ display: none !important }
+
+/*************************************** Shrink toolbar by 1 pixel *********************************************/
+#navigator-toolbox{
+  --toolbarbutton-inner-padding: 5px;
+}
+#urlbar-container{
+  --urlbar-container-height: 25px !important;
+  padding-block: 1px !important;
+}
+toolbarbutton.bookmark-item:not(.subviewbutton){
+  margin: 0px !important;
+  padding-block: 0 !important;
 }
 
-html:not([privatebrowsingmode="temporary"]) #TabsToolbar {
-  visibility: collapse !important;
+/*************************************** Remove Bookmarks Star *******************************************************/
+#star-button-box {display: none !important;}
+
+:root {
+  --sidebar-hover-width: 40px;   /* largura encostada na borda */
+  --sidebar-visible-width: 320px; /* largura quando aberta */
 }
 
-#TabsToolbar {
-  background: var(--custom-bg) !important;
+/* Esconde splitter e cabeçalho da sidebar do TST */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
+  display: none !important;
+}
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none !important;
 }
 
-html:not([privatebrowsingmode="temporary"]) .titlebar-buttonbox-container {
-  position: absolute;
-  right: 0;
-  top: 9px;
-  display: flex;
-  justify-content: center;
-  width: 110px !important;
+/* Sidebar do Tree Style Tab como overlay fixo */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+  position: fixed !important;      /* sai do fluxo da página */
+  top: 0;
+  left: 0;                         /* se estiver do lado esquerdo */
+  height: 100vh !important;
+  overflow: hidden !important;
+  min-width: var(--sidebar-hover-width) !important;
+  max-width: var(--sidebar-hover-width) !important;
+  width: var(--sidebar-hover-width) !important;
+  transition: width 0.2s ease, min-width 0.2s ease, max-width 0.2s ease !important;
+  z-index: 10 !important;                    /* fica por cima do site */
 }
 
-.titlebar-button {
-  width: 36px !important;
+/* Quando passa o mouse: expande, mas não empurra o conteúdo */
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover #sidebar {
+  min-width: var(--sidebar-visible-width) !important;
+  max-width: var(--sidebar-visible-width) !important;
+  width: var(--sidebar-visible-width) !important;
 }
-
-html:not([privatebrowsingmode="temporary"]) #sidebar-header {
-  display: none;
-}
-
-#identity-icon-label {
-  display: none;
-}
-
-#urlbar {
-  left: 50% !important;
-  transform: translateX(-50%);
-  max-width: 960px !important;
-}
-
-#urlbar:not([breakout-extend]) #urlbar-background {
-  background: none !important;
-  background-color: transparent !important;
-}
-
-html:not([privatebrowsingmode="temporary"]) #sidebar-box {
-  --uc-sidebar-width: 60px;
-  --uc-sidebar-hover-width: 360px;
-  position: relative;
-  min-width: var(--uc-sidebar-width) !important;
-  width: var(--uc-sidebar-width) !important;
-  max-width: var(--uc-sidebar-width) !important;
-  z-index: 4 !important;
-}
-
-html:not([privatebrowsingmode="temporary"]) #main-window[sizemode="fullscreen"] #sidebar-box {
-  --uc-sidebar-width: 1px;
-}
-
-html:not([privatebrowsingmode="temporary"]) #sidebar-splitter {
-  display: none;
-}
-
-html:not([privatebrowsingmode="temporary"]) #sidebar {
-  min-width: var(--uc-sidebar-width) !important;
-}
-
-html:not([privatebrowsingmode="temporary"]) #sidebar-box:hover > #sidebar {
-  min-width: var(--uc-sidebar-hover-width) !important;
-}
-
-html:not([privatebrowsingmode="temporary"]) .sidebar-panel {
-  background-color: transparent !important;
-  color: var(--newtab-text-primary-color) !important;
-}
-
