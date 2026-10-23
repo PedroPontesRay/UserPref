@@ -67,16 +67,16 @@ toolbarbutton.bookmark-item:not(.subviewbutton){
   --sidebar-visible-width: 320px; /* largura quando aberta */
 }
 
-/* Esconde splitter e cabeçalho da sidebar do TST */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
+/* Esconde splitter e cabeçalho da sidebar do Sidebery */
+#sidebar-box[sidebarcommand*="3c078156-979c-498b-8990-85f7987dd929"] + #sidebar-splitter {
   display: none !important;
 }
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+#sidebar-box[sidebarcommand*="3c078156-979c-498b-8990-85f7987dd929"] #sidebar-header {
   display: none !important;
 }
 
-/* Sidebar do Tree Style Tab como overlay fixo */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+/* Sidebar do Sidebery como overlay fixo */
+#sidebar-box[sidebarcommand*="3c078156-979c-498b-8990-85f7987dd929"] {
   position: fixed !important;      /* sai do fluxo da página */
   top: 0;
   left: 0;                         /* se estiver do lado esquerdo */
@@ -87,11 +87,18 @@ toolbarbutton.bookmark-item:not(.subviewbutton){
   width: var(--sidebar-hover-width) !important;
   transition: width 0.2s ease, min-width 0.2s ease, max-width 0.2s ease !important;
   z-index: 10 !important;                    /* fica por cima do site */
+  /* Firefox 157 "Nova" bug: hover-expanded sidebars can fail to paint the
+     theme background (fixed in 158). Painting it ourselves makes the
+     overlay opaque regardless of that bug. */
+  background-color: #2E6F40 !important;
+}
+#sidebar-box[sidebarcommand*="3c078156-979c-498b-8990-85f7987dd929"] > #sidebar {
+  background-color: #2E6F40 !important;
 }
 
 /* Quando passa o mouse: expande, mas não empurra o conteúdo */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover,
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover #sidebar {
+#sidebar-box[sidebarcommand*="3c078156-979c-498b-8990-85f7987dd929"]:hover,
+#sidebar-box[sidebarcommand*="3c078156-979c-498b-8990-85f7987dd929"]:hover #sidebar {
   min-width: var(--sidebar-visible-width) !important;
   max-width: var(--sidebar-visible-width) !important;
   width: var(--sidebar-visible-width) !important;
